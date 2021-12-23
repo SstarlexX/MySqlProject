@@ -26,7 +26,7 @@
 						$full_name = filter_var(htmlspecialchars($_POST['full_name']), FILTER_SANITIZE_STRING);
 						$username = filter_var(htmlspecialchars($_POST['username']), FILTER_SANITIZE_STRING);
 						$password = htmlspecialchars($_POST['password']);
-						$cod = filter_var($_POST['cod'],FILTER_SANITIZE_NUMBER_INT)
+						$cod = filter_var($_POST['cod'],FILTER_SANITIZE_NUMBER_INT);
 						if(filter_var($cod, FILTER_VALIDATE_INT)==1122)
 						{
 							$query=mysqli_query($con, "SELECT * FROM trainers WHERE login='".$username."'");
